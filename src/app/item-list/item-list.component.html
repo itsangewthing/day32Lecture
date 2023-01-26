@@ -1,0 +1,12 @@
+<h1>List of Items</h1>
+
+<ul> 
+    <!-- The (click) event is bound to the onItemClick() method in the child component class. 
+        The onItemClick() method takes as its argument the value of the #newItem.value property. -->
+
+<!-- The *ngFor iterates over the items in the items array. 
+    When you enter a value in the child's <input> and click the button, 
+    the child emits the event and the parent's addItem() method 
+    pushes the value to the items array and new item renders in the list. -->
+    <li *ngFor="let item of itemList" (click)="onItemClick(item)">{{item.name}}</li>
+</ul>

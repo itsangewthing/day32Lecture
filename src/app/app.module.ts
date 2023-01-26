@@ -3,14 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ItemListComponent } from './item-list/item-list.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ItemListComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+// CLI adds AppRoutingModule to the AppModule's imports array
+    RouterModule.forRoot([
+      {path:'itemList', component:ItemListComponent},
+      {path:'employeeList',component:EmployeeListComponent}
+    ]), 
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
