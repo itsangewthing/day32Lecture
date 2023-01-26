@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Create New Animal</h1>
+
+    <form #animalForm="ngForm" (ngSubmit)="animalForm.valid && onSubmit(animalForm)" novalidate>
+
+        <div class="form-groupForId">
+          <label for="id" class="form-label">Id</label>
+          <input type="text" name="id" id="id" class="form-control" placeholder="" required>
+        </div>
+       
+        <div class="form-groupForName">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="" required>
+        </div>
+
+        <div class="form-groupForLifeSpan">
+            <label for="lifespan" class="form-label">Life Span</label>
+            <input type="number" name="lifespan" id="lifespan" class="form-control" placeholder="">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
